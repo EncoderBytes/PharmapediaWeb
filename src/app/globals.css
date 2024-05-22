@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cardLink {
+  position: relative;
+  text-decoration: none;
+}
+
+.cardLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #297AAF;
+  transition: width 0.3s ease;
+}
+
+.cardLink:hover::after {
+  width: 100%;
+}
+
+
+
+
+.cardView {
+  position: relative;
+  text-decoration: none;
+}
+
+.cardView:hover::after {
+  width: 100%;
+}
+
+.cardView:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.104);
+}
+
+
+
+.swiper-container {
+  position: relative;
+  width: 90%;
+  height: 580px;
+  margin: 0 auto;
+}
+
+.swiper-container .swiper-button-next,
+.swiper-container .swiper-button-prev {
+  color: #fff;
+  bottom: 10px;
+  top: unset;
+  position: absolute;
+  width: 20px;
+  height: auto;
+}
+
+.swiper-container .swiper-button-next {
+  right: 40%;
+}
+
+.swiper-container .swiper-button-prev {
+  left: 40%;
+}
+
+.swiper-container .swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
