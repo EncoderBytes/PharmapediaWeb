@@ -223,8 +223,8 @@ subscription code?  "
                     <p className="text-blue text-2xl font-bold absolute top-24">Khan</p>
                     <p className=" text-lg text-blue font-bold absolute top-32">Teacher2</p>
                     <p className="text-pClr text-base text-center px-1">
-                      "I have found it very helpful in my daily life and in my job. Thank you for such an
-                      incredible app😍. Highly recommended to healthcare professionals."
+                      &quot;I have found it very helpful in my daily life and in my job. Thank you for such an
+                      incredible app😍. Highly recommended to healthcare professionals.&quot;
                     </p>
                   </div>
                 </div>
@@ -237,8 +237,8 @@ subscription code?  "
                     <p className="text-blue text-2xl font-bold absolute top-28">Khan</p>
                     <p className=" text-lg text-blue font-bold absolute top-36">Teacher</p>
                     <p className="text-pClr text-base text-center px-1">
-                      "I have found it very helpful in my daily life and in my job. Thank you for such an
-                      incredible app😍. Highly recommended to healthcare professionals."
+                      &quot;I have found it very helpful in my daily life and in my job. Thank you for such an
+                      incredible app😍. Highly recommended to healthcare professionals.&quot;
                     </p>
                   </div>
                 </div>
@@ -251,8 +251,8 @@ subscription code?  "
                     <p className="text-blue text-2xl font-bold absolute top-28">Khan</p>
                     <p className=" text-lg text-blue font-bold absolute top-36">Teacher</p>
                     <p className="text-pClr text-base text-center px-1">
-                      "I have found it very helpful in my daily life and in my job. Thank you for such an
-                      incredible app😍. Highly recommended to healthcare professionals."
+                      &quot;I have found it very helpful in my daily life and in my job. Thank you for such an
+                      incredible app😍. Highly recommended to healthcare professionals.&quot;
                     </p>
                   </div>
                 </div>
@@ -265,8 +265,8 @@ subscription code?  "
                     <p className="text-blue text-2xl font-bold absolute top-28">Khan</p>
                     <p className=" text-lg text-blue font-bold absolute top-36">Teacher</p>
                     <p className="text-pClr text-base text-center px-1">
-                      "I have found it very helpful in my daily life and in my job. Thank you for such an
-                      incredible app😍. Highly recommended to healthcare professionals."
+                      &quot;I have found it very helpful in my daily life and in my job. Thank you for such an
+                      incredible app😍. Highly recommended to healthcare professionals.&quot;
                     </p>
                   </div>
                 </div>
@@ -279,8 +279,8 @@ subscription code?  "
                     <p className="text-blue text-2xl font-bold  absolute top-28">Khan</p>
                     <p className=" text-lg text-blue font-bold absolute top-36">Teacher</p>
                     <p className="text-pClr text-base text-center">
-                      "I have found it very helpful in my daily life and in my job. Thank you for such an
-                      incredible app😍. Highly recommended to healthcare professionals."
+                      &quot;I have found it very helpful in my daily life and in my job. Thank you for such an
+                      incredible app😍. Highly recommended to healthcare professionals.&quot;
                     </p>
                   </div>
                 </div>
@@ -293,8 +293,8 @@ subscription code?  "
                     <p className="text-blue text-2xl font-bold  absolute top-28">Khan</p>
                     <p className=" text-lg text-blue font-bold absolute top-36">Teacher</p>
                     <p className="text-pClr text-base text-center">
-                      "I have found it very helpful in my daily life and in my job. Thank you for such an
-                      incredible app😍. Highly recommended to healthcare professionals."
+                      &quot;I have found it very helpful in my daily life and in my job. Thank you for such an
+                      incredible app😍. Highly recommended to healthcare professionals.&quot;
                     </p>
                   </div>
                 </div>
