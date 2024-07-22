@@ -17,12 +17,26 @@ module.exports = {
       },
 
       colors: {
-        blue: "#297AAF",
+        blue: "#2980B9",
         blue_sec: "#438AB8",
+        borderBlue: "#2AA7FF",
+        hover_blue: "#297AAF",
+        hover_blue2: "#64C2FF",
         darkblue: "#2980B9",
         pClr: "#6C6C72",
         bg_1: "#FAFBFF",
-        
+        heading_blue: "#0A64B3",
+        t_grey: "#707070",
+        lightBlue: "#33ABFF",
+        footerGrey: "#A0A0A0",
+        facebook: "#3B5998",
+        twitter: "#00ACED",
+        pintrest: "#CC232A",
+        prodclr1: "#5C5E6E",
+        prodclr2: "#756F6F",
+        greyBg: "#F2F2F2"
+      },
+      gradients: {
       },
       navWidth: {
         width: "400px"

@@ -1,158 +1,334 @@
-"use client"
-// import React from 'react'
-// import Link from 'next/link';
-// // import logo from ''
+// "use client";
 
-// const Navbar = () => {
-//   return (
-//     <nav className='nav bg-blue h-20 flex justify-center items-center'>
-//       <div className="w-10/12">
-//         <div className="flex justify-between items-center text-white">
-//           <ul className='flex items-center justify-center gap-16 uppercase text-xl'>
-//             <li><Link href="/">Home</Link></li>
-//             <li><Link href="/blogs">Blogs</Link></li>
-//             <li><Link href="/products">Products</Link></li>
-//             <li><Link href="/faqs">FAQs</Link></li>
-//             <li><Link href="/contact">Contact Us</Link></li>
-//             <li className='bg-white text-blue rounded-3xl h-12 w-40 flex items-center justify-center'>
-//               <a href="/download">Download</a>
-//             </li>
-//           </ul>
-//           <div className="">
-//             <img src="/logo.svg" alt="Company Logo" width={200} height={300} />
-//           </div>
-//         </div>
-//       </div>
-//     </nav>
-//   )
-// }
-
-// export default Navbar
-
-// import Link from 'next/link';
+// import Image from 'next/image';
+// import { FaFacebookF, FaInstagram, FaYoutube, FaBars, FaTimes } from "react-icons/fa";
 // import { useState } from 'react';
+// import Head from 'next/head';
+// import Link from 'next/link';
+// // import Footer from './Footer';
+// import { IoIosSearch } from "react-icons/io";
 
 // export default function Navbar() {
-//   const [isOpen, setIsOpen] = useState(false);
+//   const [moveTo, setMoveTo] = useState("Home");
+//   const [menuOpen, setMenuOpen] = useState(false);
+
+//   const [query, setQuery] = useState('');
+//   const [showSearchBox, setShowSearchBox] = useState(false);
+
+//   const handleInputChange = (event) => {
+//     setQuery(event.target.value);
+//   };
+
+//   const handleSubmit = (event) => {
+//     event.preventDefault();
+//     // Implement the search logic or API call here
+//     console.log('Search query:', query);
+//   };
+
+//   const toggleSearchBox = () => {
+//     setShowSearchBox(!showSearchBox);
+//   };
 
 //   return (
-//     <nav className="nav bg-blue h-20 flex justify-center items-center">
-//       <div className="w-10/12 flex justify-between items-center">
-//         <div className="block lg:hidden">
-//           <button
-//             onClick={() => setIsOpen(!isOpen)}
-//             className="text-white focus:outline-none"
-//             aria-label="Toggle menu"
-//           >
-//             <svg
-//               className="w-6 h-6"
-//               fill="none"
-//               stroke="currentColor"
-//               viewBox="0 0 24 24"
-//               xmlns="http://www.w3.org/2000/svg"
-//             >
-//               <path
-//                 strokeLinecap="round"
-//                 strokeLinejoin="round"
-//                 strokeWidth="2"
-//                 d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-7 6h7'}
-//               ></path>
-//             </svg>
-//           </button>
+//     <>
+//       <Head>
+//         <title>Pharmapedia</title>
+//         <meta name="description" content="Pharmapedia - Your reliable source for pharmaceutical products and information." />
+//         <meta name="keywords" content="Pharmapedia, pharmaceutical, products, health, medicine" />
+//         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+//         <link rel="canonical" href="https://www.pharmapedia.pro" />
+//       </Head>
+//       <nav className="w-full">
+//         <div className={`h-10 w-full flex items-center justify-center ${moveTo === "Home" ? "bg-blue text-white" : "bg-white text-black"}`}>
+//           <div className="w-11/12 sm:w-9/12 flex m-auto justify-between">
+//             <div className="flex items-center  gap-3 text-3xl">
+//               <a href="https://www.facebook.com" className='sm:text-base text-sm border-r border-borderBlue md:border-r-2 pr-3 py-1' aria-label="Facebook">
+//                 <FaFacebookF className='cursor-pointer' />
+//               </a>
+//               <a href="https://www.youtube.com" className='sm:text-base text-sm border-r border-borderBlue md:border-r-2 pr-3 py-1' aria-label="YouTube">
+//                 <FaYoutube className='cursor-pointer' />
+//               </a>
+//               <a href="https://www.instagram.com" className='sm:text-base text-sm' aria-label="Instagram">
+//                 <FaInstagram className='cursor-pointer' />
+//               </a>
+//             </div>
+
+//             <div className="flex-row items-center justify-end gap-6 sm:flex font-semibold text-[9px] sm:text-sm">
+//               <p className="">SAHARBEGUM@PHARMAPEDIA.PRO</p>
+//               <p className="">+923494428783</p>
+//             </div>
+//           </div>
 //         </div>
-//         <div className="hidden lg:block">
-//           <img src="/logo.svg" alt="Company Logo" width={200} height={300} />
+//         <div className={`h-20 md:h-28 flex items-center justify-center ${moveTo !== "Home" ? "absolute bg-transparent w-full top-12 z-50" : "block"} `}>
+//           <div className="w-10/12 flex justify-between items-center m-auto">
+//             <div className="flex-shrink-0">
+//               <Link href="/" onClick={() => setMoveTo("Home")}>
+//                 <Image
+//                   src="/logo.svg"
+//                   alt="Pharmapedia Logo"
+//                   width={289}
+//                   height={87}
+//                   priority
+//                 />
+//               </Link>
+//             </div>
+//             <div className="flex-grow hidden lg:flex items-center justify-center">
+//               <ul className={`flex justify-center items-center gap-7 text-base xl:text-lg ${moveTo !== "Home" ? "text-white" : ""}`}>
+//                 <li onClick={() => setMoveTo("Home")}>
+//                   <Link href="/" className={`${moveTo === "Home" ? "text-hover_blue font-bold" : ""}`}>Home</Link>
+//                 </li>
+//                 <li onClick={() => setMoveTo("About")}>
+//                   {/* <a href="/About" className={`${moveTo === "About" ? "text-hover_blue2 font-bold" : ""}`}>About us</a> */}
+//                   <Link href="/About" className={`${moveTo === "About" ? "text-hover_blue2 font-bold" : ""}`}>About us</Link>
+//                 </li>
+//                 <li onClick={() => setMoveTo("Blog")}>
+//                   <Link href="/Blog" className={`${moveTo === "Blog" ? "text-hover_blue2 font-bold" : ""}`}>Blogs</Link>
+//                 </li>
+//                 <li onClick={() => setMoveTo("Our Products")}>
+//                   <a href="#our-products" className={`${moveTo === "Our Products" ? "text-hover_blue2 font-bold" : ""}`}>Our Products</a>
+//                 </li>
+//                 <li onClick={() => setMoveTo("FAQs")}>
+//                   <Link href="/Faqs" className={`${moveTo === "FAQs" ? "text-hover_blue2 font-bold" : ""}`}>FAQs</Link>
+//                 </li>
+//               </ul>
+//             </div>
+//             <div className="hidden lg:flex items-center justify-center gap-5">
+//               <div>
+//                 {!showSearchBox && <IoIosSearch onClick={toggleSearchBox} style={{ cursor: 'pointer', fontSize: '34px' }} />}
+//                 {showSearchBox && (
+//                   <form onSubmit={handleSubmit} className='flex justify-center items-center'>
+//                     <IoIosSearch className='text-white' onClick={toggleSearchBox} style={{ cursor: 'pointer', fontSize: '30px' }} />
+//                     {/* <label htmlFor="search" style={{ display: 'none' }}>Search:</label> */}
+//                     <input
+//                       type="text"
+//                       id="search"
+//                       name="q"
+//                       value={query}
+//                       onChange={handleInputChange}
+//                       placeholder="Search"
+//                       className='outline-none border-1 border-black rounded-md p-1'
+//                       autoFocus
+//                     />
+//                   </form>
+//                 )}
+//               </div>
+//               <button className={` ${moveTo !== "Home" ? "button-outlined2" : "button-outlined"} `}>Contact Us</button>
+//             </div>
+//             <div className="lg:hidden text-2xl">
+//               <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+//                 {menuOpen ? <FaTimes /> : <FaBars />}
+//               </button>
+//             </div>
+//           </div>
 //         </div>
-//         <div className={`fixed inset-0 bg-blue bg-opacity-95 z-50 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 lg:static lg:bg-transparent lg:transform-none lg:transition-none lg:opacity-100 lg:w-auto lg:flex lg:items-center`}>
-//           <ul className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 uppercase text-xl text-white lg:bg-transparent h-full lg:h-auto">
-//             <li><Link href="/">Home</Link></li>
-//             <li><Link href="/blogs">Blogs</Link></li>
-//             <li><Link href="/products">Products</Link></li>
-//             <li><Link href="/faqs">FAQs</Link></li>
-//             <li><Link href="/contact">Contact Us</Link></li>
-//             <li className="bg-white text-blue rounded-3xl h-12 w-40 flex items-center justify-center">
-//               <a href="/download">Download</a>
-//             </li>
-//           </ul>
-//         </div>
-//       </div>
-//     </nav>
+//         {menuOpen && (
+//           <div className="lg:hidden bg-slate-100 w-full">
+//             <ul className='flex flex-col items-center gap-4 py-4 text-lg'>
+//               <li onClick={() => { setMoveTo("Home"); setMenuOpen(false); }}>
+//                 <a href="#home" className={`${moveTo === "Home" ? "text-hover_blue font-bold" : "text-black"}`}>Home</a>
+//               </li>
+//               <li onClick={() => { setMoveTo("About us"); setMenuOpen(false); }}>
+//                 <a href="#about-us" className={`${moveTo === "About us" ? "text-hover_blue font-bold" : "text-black"}`}>About us</a>
+//               </li>
+//               <li onClick={() => { setMoveTo("Blogs"); setMenuOpen(false); }}>
+//                 <a href="#blogs" className={`${moveTo === "Blogs" ? "text-hover_blue font-bold" : "text-black"}`}>Blogs</a>
+//               </li>
+//               <li onClick={() => { setMoveTo("Our Products"); setMenuOpen(false); }}>
+//                 <a href="#our-products" className={`${moveTo === "Our Products" ? "text-hover_blue font-bold" : "text-black"}`}>Our Products</a>
+//               </li>
+//               <li onClick={() => { setMoveTo("FAQs"); setMenuOpen(false); }}>
+//                 <a href="#faqs" className={`${moveTo === "FAQs" ? "text-hover_blue font-bold" : "text-black"}`}>FAQs</a>
+//               </li>
+//               <li>
+//                 <button className="button-outlined">Contact Us</button>
+//               </li>
+//             </ul>
+//           </div>
+//         )}
+//       </nav >
+//     </>
 //   );
 // }
 
 
+
+
+"use client";
+
+import Image from 'next/image';
+import { FaFacebookF, FaInstagram, FaYoutube, FaBars, FaTimes } from "react-icons/fa";
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
-import { useState } from 'react';
+import { IoIosSearch } from "react-icons/io";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  // Assuming you are in a component or function
+  const currentUrl = typeof window !== 'undefined' ? window.location.pathname : '';
+
+  // console.log('Current URL:', currentUrl);
+
+  const [moveTo, setMoveTo] = useState(currentUrl);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [query, setQuery] = useState('');
+  const [showSearchBox, setShowSearchBox] = useState(false);
+
+  useEffect(() => {
+    // Extract current pathname from window.location
+    const path = window.location.pathname;
+    // Determine active link based on pathname
+    if (path === "/") {
+      setMoveTo("Home");
+    } else if (path === "/About") {
+      setMoveTo("About");
+    } else if (path === "/Blog") {
+      setMoveTo("Blog");
+    } else if (path === "/Products") {
+      setMoveTo("Products");
+    } else if (path === "/Faqs") {
+      setMoveTo("FAQs");
+    } else {
+      setMoveTo("Home"); // Default to Home if path not matched
+    }
+
+    // Cleanup function to prevent memory leaks
+    // return () => {
+
+    // };
+  }, []);
+
+  const handleInputChange = (event) => {
+    setQuery(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Implement the search logic or API call here
+    console.log('Search query:', query);
+  };
+
+  const toggleSearchBox = () => {
+    setShowSearchBox(!showSearchBox);
+  };
 
   return (
-    <nav className="nav bg-blue h-20 flex justify-center items-center">
-      <div className="w-10/12 flex justify-between items-center">
-        <div className="block lg:hidden">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-white focus:outline-none"
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-7 6h7'}
-              ></path>
-            </svg>
-          </button>
-        </div>
+    <>
+      <Head>
+        <title>Pharmapedia</title>
+        <meta name="description" content="Pharmapedia - Your reliable source for pharmaceutical products and information." />
+        <meta name="keywords" content="Pharmapedia, pharmaceutical, products, health, medicine" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.pharmapedia.pro" />
+      </Head>
+      <nav className="w-full">
+        <div className={`h-10 w-full flex items-center justify-center ${moveTo === "Home" ? "bg-blue text-white" : "bg-white text-black"}`}>
+          <div className="w-11/12 sm:w-9/12 flex m-auto justify-between">
+            <div className="flex items-center  gap-3 text-3xl">
+              <a href="https://www.facebook.com" className='sm:text-base text-sm border-r border-borderBlue md:border-r-2 pr-3 py-1' aria-label="Facebook">
+                <FaFacebookF className='cursor-pointer' />
+              </a>
+              <a href="https://www.youtube.com" className='sm:text-base text-sm border-r border-borderBlue md:border-r-2 pr-3 py-1' aria-label="YouTube">
+                <FaYoutube className='cursor-pointer' />
+              </a>
+              <a href="https://www.instagram.com" className='sm:text-base text-sm' aria-label="Instagram">
+                <FaInstagram className='cursor-pointer' />
+              </a>
+            </div>
 
-        <div
-          className={`fixed inset-0 bg-blue bg-opacity-95 z-50 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
-            } transition-transform duration-300 lg:static lg:bg-transparent lg:transform-none lg:transition-none lg:opacity-100 lg:w-auto lg:flex lg:items-center`}
-        >
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-white lg:hidden"
-            aria-label="Close menu"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          </button>
-          <ul className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 uppercase text-xl text-white lg:bg-transparent h-full lg:h-auto">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/blogs">Blogs</Link></li>
-            <li><Link href="/products">Products</Link></li>
-            <li><Link href="/faqs">FAQs</Link></li>
-            <li><Link href="/contact">Contact Us</Link></li>
-            <li className="bg-white text-blue rounded-3xl h-12 w-40 flex items-center justify-center">
-              <a href="/download">Download</a>
-            </li>
-          </ul>
+            <div className="flex-row items-center justify-end gap-6 sm:flex font-semibold text-[9px] sm:text-sm">
+              <p className="">saharbegum@pharmapedia.pro</p>
+              <p className="">+92&nbsp;3494428783</p>
+            </div>
+          </div>
         </div>
-
-        <div className="md:w-52 w-40 lg:block">
-          <img src="/logo.svg" alt="Company Logo" width={200} height={300} />
+        <div className={`h-20 md:h-28 flex items-center justify-center ${moveTo !== "Home" ? "absolute bg-transparent w-full top-12 z-50" : "block"} `}>
+          <div className="w-10/12 flex justify-between items-center m-auto">
+            <div className="flex-shrink-0">
+              <Link href="/" onClick={() => setMoveTo("Home")}>
+                <Image
+                  src="/logo.svg"
+                  alt="Pharmapedia Logo"
+                  width={289}
+                  height={87}
+                  priority
+                />
+              </Link>
+            </div>
+            <div className="flex-grow hidden lg:flex items-center justify-center">
+              <ul className={`flex justify-center items-center gap-7 text-base xl:text-lg ${moveTo !== "Home" ? "text-white" : ""}`}>
+                <li onClick={() => setMoveTo("Home")}>
+                  <Link href="/" className={`${moveTo === "Home" ? "text-hover_blue font-bold" : ""}`}>Home</Link>
+                </li>
+                <li onClick={() => setMoveTo("About")}>
+                  <Link href="/About" className={`${moveTo === "About" ? "text-hover_blue2 font-bold" : ""}`}>About us</Link>
+                </li>
+                <li onClick={() => setMoveTo("Blog")}>
+                  <Link href="/Blog" className={`${moveTo === "Blog" ? "text-hover_blue2 font-bold" : ""}`}>Blogs</Link>
+                </li>
+                {/* <li onClick={() => setMoveTo("Products")}>
+                  <a href="/Products" className={`${moveTo === "Products" ? "text-hover_blue2 font-bold" : ""}`}>Our Products</a>
+                </li> */}
+                <li onClick={() => setMoveTo("Products")}>
+                  <Link href="/Products" className={`${moveTo === "Products" ? "text-hover_blue2 font-bold" : ""}`}>Products</Link>
+                </li>
+                <li onClick={() => setMoveTo("FAQs")}>
+                  <Link href="/Faqs" className={`${moveTo === "FAQs" ? "text-hover_blue2 font-bold" : ""}`}>FAQs</Link>
+                </li>
+              </ul>
+            </div>
+            <div className="hidden lg:flex items-center justify-center gap-5">
+              <div>
+                {!showSearchBox && <IoIosSearch onClick={toggleSearchBox} style={{ cursor: 'pointer', fontSize: '34px' }} />}
+                {showSearchBox && (
+                  <form onSubmit={handleSubmit} className='flex justify-center items-center'>
+                    <IoIosSearch className='text-white' onClick={toggleSearchBox} style={{ cursor: 'pointer', fontSize: '30px' }} />
+                    <input
+                      type="text"
+                      id="search"
+                      name="q"
+                      value={query}
+                      onChange={handleInputChange}
+                      placeholder="Search"
+                      className='outline-none border-1 border-black rounded-md p-1'
+                      autoFocus
+                    />
+                  </form>
+                )}
+              </div>
+              <button className={` ${moveTo !== "Home" ? "button-outlined2" : "button-outlined"} `}>Contact Us</button>
+            </div>
+            <div className="lg:hidden text-2xl">
+              <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+                {menuOpen ? <FaTimes /> : <FaBars />}
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
+        {menuOpen && (
+          <div className="lg:hidden bg-slate-100 w-full">
+            <ul className='flex flex-col items-center gap-4 py-4 text-lg'>
+              <li onClick={() => { setMoveTo("Home"); setMenuOpen(false); }}>
+                <a href="#home" className={`${moveTo === "Home" ? "text-hover_blue font-bold" : "text-black"}`}>Home</a>
+              </li>
+              <li onClick={() => { setMoveTo("About us"); setMenuOpen(false); }}>
+                <a href="#about-us" className={`${moveTo === "About us" ? "text-hover_blue font-bold" : "text-black"}`}>About us</a>
+              </li>
+              <li onClick={() => { setMoveTo("Blogs"); setMenuOpen(false); }}>
+                <a href="#blogs" className={`${moveTo === "Blogs" ? "text-hover_blue font-bold" : "text-black"}`}>Blogs</a>
+              </li>
+              <li onClick={() => { setMoveTo("Our Products"); setMenuOpen(false); }}>
+                <a href="#our-products" className={`${moveTo === "Our Products" ? "text-hover_blue font-bold" : "text-black"}`}>Our Products</a>
+              </li>
+              <li onClick={() => { setMoveTo("FAQs"); setMenuOpen(false); }}>
+                <a href="#faqs" className={`${moveTo === "FAQs" ? "text-hover_blue font-bold" : "text-black"}`}>FAQs</a>
+              </li>
+              <li>
+                <button className="button-outlined">Contact Us</button>
+              </li>
+            </ul>
+          </div>
+        )}
+      </nav >
+    </>
   );
 }
