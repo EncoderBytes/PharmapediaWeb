@@ -5,9 +5,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-/* * {
-  transition: 0.1s ease-in;
-} */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
 
 h1,
 h2,
@@ -133,6 +135,7 @@ input {
 
   .swiper-container .swiper-button-next,
   .swiper-container .swiper-button-prev {
-    display: none;
+    width: 38px;
+    height: 38px;
   }
 }

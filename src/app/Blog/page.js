@@ -14,20 +14,20 @@ const Blog = () => {
       <section className="flex justify-center items-center h-[597px] overflow-hidden relative z-30" style={{
         background: "radial-gradient(circle, #57A8D1 0%, #2980B9 100%)"
       }}>
-        <div className="text-white w-3/6 text-center flex flex-col justify-center items-center gap-5">
+        <div className="text-white w-11/12 lg:w-3/6 text-center flex flex-col justify-center items-center gap-5">
           <h1 className="text-6xl font-light">Our Blogs</h1>
-          <p className="leading-7 text-xl">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
+          <p className="leading-6 md:leading-7 md:text-xl text-lg">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
         </div>
-        <Image src="/DownBtn.svg" alt="Scroll down button" width={40} height={40} className='absolute bottom-10 cursor-pointer' onClick={scrollToSchools} />
-        <div className="w-60 h-60 border-1 rounded-full border-white opacity-30 absolute -bottom-40 -left-14 z-10" aria-hidden="true"></div>
-        <div className="w-[350px] h-[350px] border-1 rounded-full border-white opacity-30 absolute -bottom-48 -left-24 z-10"></div>
-        <div className="w-[493px] h-[493px] border-1 rounded-full border-white opacity-30 absolute -bottom-60 -left-40 z-10"></div>
-        <div className="w-[606px] h-[606px] border-1 rounded-full border-white opacity-30 absolute -bottom-64 -left-44 z-10"></div>
+        <Image src="/DownBtn.svg" alt="Scroll down button" width={40} height={40} className='absolute bottom-10 cursor-pointer z-50' onClick={scrollToSchools} />
+        <div className="md:w-60 md:h-60 w-40 h-40 border-1 rounded-full border-white opacity-25 absolute md:-bottom-20 md:-left-44 -bottom-10 -left-20 z-10" aria-hidden="true"></div>
+        <div className="md:w-[350px] md:h-[350px] w-[320px] h-[320px] border-1 rounded-full border-white opacity-25 absolute md:-bottom-24 md:-left-48 -bottom-24 -left-44 z-10"></div>
+        <div className="md:w-[493px] md:h-[493px] w-[463px] h-[463px] border-1 rounded-full border-white opacity-25 absolute -bottom-28 -left-56 z-10"></div>
+        <div className="md:w-[606px] md:h-[606px] w-[573px] h-[573px] border-1 rounded-full border-white opacity-25 absolute -bottom-32 -left-60 z-10"></div>
 
-        <div className="w-80 h-80 border-1 rounded-full border-white opacity-30 absolute -bottom-32 -right-44 z-10"></div>
-        <div className="w-[452px] h-[452px] border-1 rounded-full border-white opacity-30 absolute -bottom-40 -right-52 z-10"></div>
-        <div className="w-[637px] h-[637px] border-1 rounded-full border-white opacity-30 absolute -bottom-48 -right-60 z-10"></div>
-        <div className="w-[783px] h-[783px] border-1 rounded-full border-white opacity-30 absolute -bottom-56 -right-64 z-10"></div>
+        <div className="md:w-80 md:h-80 border-1 rounded-full border-white opacity-25 absolute -top-40 right-10 z-10 hidden md:block"></div>
+        <div className="md:w-[452px] md:h-[452px] border-1 rounded-full border-white opacity-25 absolute -top-48 -right-12 z-10 hidden md:block"></div>
+        <div className="md:w-[637px] md:h-[637px] border-1 rounded-full border-white opacity-25 absolute -top-60 -right-36 z-10 hidden md:block"></div>
+        <div className="md:w-[783px] md:h-[783px] border-1 rounded-full border-white opacity-25 absolute -top-64 -right-56 z-10 hidden md:block"></div>
       </section>
 
       <section className="py-20 relative overflow-hidden" id='drop'>
@@ -103,25 +103,25 @@ const Blog = () => {
                 </div>
               </div>
             ))}
-            <button className="button-filled">Load more</button>
+            <button className="button-filled z-50">Load more</button>
           </div>
         </div>
       </section>
 
       <section className="m-auto w-11/12" >
-        <div className="h-[448px] flex items-end justify-center" style={{
+        <div className="md:h-[448px] h-auto flex items-end justify-center" style={{
           background: "radial-gradient(circle , #ABDCFF 0%, #298ED6 100%)"
         }}>
 
-          <div className="flex items-center justify-end w-11/12 ms-auto" >
-            <div className="left text-white w-1/2 flex flex-col items-start justify-start gap-3">
+          <div className="flex items-center flex-col md:flex-row justify-end w-11/12 ms-auto md:mb-0 mt-5" >
+            <div className="left text-white w-full md:w-1/2 flex flex-col items-start justify-start gap-3">
               <h1 className="text-3xl font-light uppercase tracking-wider">Learn More About <br /> our Products</h1>
-              <p className="text-lg tracking-wide">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
+              <p className="text-lg tracking-wide leading-6 md:leading-7">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
               <button className="button-filled">
                 Learn More
               </button>
             </div>
-            <div className="right w-1/2">
+            <div className="right  w-full md:w-1/2">
               <Image src="./blogPageiPhone12Pro.svg" width={1084} height={812} alt='blogPageImg' />
             </div>
           </div>
@@ -154,8 +154,8 @@ const Blog = () => {
         </div>
       </section>
 
-      <section className="m-auto overflow-hidden relative">
-        <div className="w-10/12 m-auto flex flex-col md:flex-row items-center justify-center gap-20 relative py-28">
+      <section className="m-auto overflow-hidden relative" id='contact'>
+        <div className="w-10/12 m-auto flex flex-col-reverse md:flex-row items-center justify-center gap-20 relative py-28">
           <div className="left w-full md:w-1/2 relative z-30">
             <form action="">
               <div className="flex justify-between items-center gap-2 md:gap-10 mb-4">
@@ -174,14 +174,14 @@ const Blog = () => {
                 <input type="email" name="email" id="email" placeholder='Example@company.com' required className='h-12 w-full rounded-lg p-3 outline-none border-slate-400 border' />
               </div>
 
-              <div className=" mb-4">
+              <div className="mb-4">
                 <label htmlFor="phone" className='text-sm font-medium leading-6'>Phone number</label>
-                <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input'>
+                <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input '>
                   <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none'>
                     <option value="PK">PK +92</option>
                     <option value="IND">IND +91</option>
                   </select>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-10/12 px-3 outline-none' />
+                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-8/12 px-3 outline-none' />
                 </div>
               </div>
 
@@ -221,7 +221,6 @@ const Blog = () => {
 
         <Image src='./Ellipse 45.svg' width={116} height={116} alt="Ellipse Image" className='absolute top-1/3 right-0' />
       </section>
-
     </main >
   )
 }

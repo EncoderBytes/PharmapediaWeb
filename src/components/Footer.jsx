@@ -33,10 +33,6 @@ const Footer = () => {
               <div className="links flex flex-col items-start justify-start text-lg text-footerGrey gap-3">
                 <p className="font-bold text-lg md:text-xl text-white">Quick Links</p>
                 <Link href="/About" className='text-sm md:text-lg'>About us</Link>
-                {/* <Link></Link> */}
-                {/* <li onClick={() => setMoveTo("About")}>
-                  /About className={`${moveTo === "About" ? "text-hover_blue2 font-bold" : ""}`}>About us</Link>
-                </li> */}
                 <Link href="/Products" className='text-sm md:text-lg'>Our Products</Link>
                 <Link href="/Blog" className='text-sm md:text-lg'>Blogs</Link>
               </div>
@@ -53,7 +49,7 @@ const Footer = () => {
           <div className="w-4/12 pt-10">
             <div className="links flex flex-col items-start justify-start text-lg gap-1 md:gap-3 text-white">
               <p className="font-bold text-lg md:text-xl">Address</p>
-              <a href="" className='text-sm md:text-lg'>SAHARBEGUM@PHARMAPEDIA.PRO</a>
+              <a href="" className='text-sm lg:text-lg'>SAHARBEGUM@PHARMAPEDIA.PRO</a>
               <a href="" className='text-sm md:text-lg'>+923494428783</a>
             </div>
           </div>
@@ -65,17 +61,17 @@ const Footer = () => {
               <p className="text-xs md:text-base text-white">&copy; Copyright 2024. All Right Reserved.</p>
             </div>
             <div className="flex items-center text-white gap-3 md:gap-4">
-              <a href="#" className='text-xs md:text-base border-r border-white md:border-r-2 pr-2 md:pr-3 py-1' aria-label="Facebook">
+              <a href="https://www.facebook.com/Pharmapedia01" target='_blank' className='text-xs md:text-base border-r border-white md:border-r-2 pr-2 md:pr-3 py-1' aria-label="Facebook">
                 <FaFacebookF className='cursor-pointer' />
               </a>
-              <a href="#" className='text-xs md:text-base border-r border-white md:border-r-2 pr-2 md:pr-3 py-1' aria-label="YouTube">
+              <a href="https://www.instagram.com/pharmapedia01/?hl=en" target='_blank' className='text-xs md:text-base border-r border-white md:border-r-2 pr-2 md:pr-3 py-1' aria-label="Instagram">
                 <AiFillInstagram className='cursor-pointer' />
               </a>
-              <a href="#" className='text-xs md:text-base border-r border-white md:border-r-2 pr-2 md:pr-3 py-1' aria-label="Instagram">
+              <a href="#" className='text-xs md:text-base border-r border-white md:border-r-2 pr-2 md:pr-3 py-1' aria-label="Twitter">
                 <FaTwitter className='cursor-pointer' />
               </a>
 
-              <a href="#" className='text-xs md:text-base' aria-label="Instagram">
+              <a href="#" className='text-xs md:text-base' aria-label="YouTube">
                 <FaYoutube className='cursor-pointer' />
               </a>
             </div>
