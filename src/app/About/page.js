@@ -25,8 +25,8 @@ const page = () => {
 
         <div className="md:w-80 md:h-80 border-1 rounded-full border-white opacity-25 absolute -top-40 right-10 z-10 hidden md:block"></div>
         <div className="md:w-[452px] md:h-[452px] border-1 rounded-full border-white opacity-25 absolute -top-48 -right-12 z-10 hidden md:block"></div>
-        <div className="md:w-[637px] md:h-[637px] border-1 rounded-full border-white opacity-25 absolute -top-60 -right-36 z-10 hidden md:block"></div>
-        <div className="md:w-[783px] md:h-[783px] border-1 rounded-full border-white opacity-25 absolute -top-64 -right-56 z-10 hidden md:block"></div>
+        <div className="md:w-[637px] md:h-[637px] border-1 rounded-full border-white opacity-25 absolute -top-60 -right-36 z-10 hidden lg:block"></div>
+        <div className="md:w-[783px] md:h-[783px] border-1 rounded-full border-white opacity-25 absolute -top-64 -right-56 z-10 hidden lg:block"></div>
       </section>
 
       <section className="w-10/12 m-auto my-14">
@@ -52,7 +52,7 @@ const page = () => {
           <div className="flex flex-col md:flex-row items-center justify-between absolute w-full">
             <Image src="/aboutProduct3.svg" alt="Our-Mission" className='xl:w-[415px] lg:w-[405px] md:w-[315px] w-[415px]' width={100} height={526} loading='lazy' />
             <Image src="/aboutProduct2.svg" alt="Our-Mission" className='xl:w-[415px] lg:w-[405px] md:w-[315px] w-[415px]' width={100} height={526} loading='lazy' />
-            <Image src="/aboutProduct1.svg" alt="Our-Mission" className='xl:w-[415px] lg:w-[405px] lg:block md:hidden  md:w-[315px] w-[415px]' width={100} height={526} loading='lazy' />
+            <Image src="/aboutProduct1.svg" alt="Our-Mission" className='xl:w-[415px] lg:w-[405px] xl:block md:hidden  md:w-[315px] w-[415px]' width={100} height={526} loading='lazy' />
           </div>
         </div>
       </section>
@@ -60,8 +60,8 @@ const page = () => {
       <section className='mt-64' style={{
         background: "linear-gradient(to bottom, #926B80, #936B80, #9C758A, #A88196, #B891A6, #DAB3C8, #E8C1D6 ,#F0C9DE ,#F2CBE0, #EEC7DC, #EAC5D8)"
       }}>
-        <div className="flex flex-col md:flex-row items-center justify-between w-10/12 m-auto h-[541px]">
-          <div className="left w-full md:w-1/2 mt-10 md:mt-0 flex flex-col gap-4 pl-2">
+        <div className="flex flex-col md:flex-row items-center justify-between w-11/12 md:w-10/12 m-auto h-[548px]">
+          <div className="left w-full md:w-1/2 mt-10 md:mt-0 flex flex-col pl-2">
             <h2 className="uppercase font-light text-4xl md:text-5xl text-white tracking-wider">Vision</h2>
             <p className="text-sm md:text-xl text-white">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
             <button className="button-filled">
@@ -74,11 +74,11 @@ const page = () => {
         </div>
       </section>
 
-      <section className="m-auto overflow-hidden relative" id='contact'>
-        <div className="w-10/12 m-auto flex flex-col-reverse md:flex-row items-center justify-center gap-20 relative py-28">
+      <section className="m-auto overflow-hidden relative" id='contact' >
+        <div className="w-10/12 m-auto flex flex-col-reverse md:flex-row items-center justify-center gap-20 relative py-20">
           <div className="left w-full md:w-1/2 relative z-30">
             <form action="">
-              <div className="flex justify-between items-center gap-2 md:gap-10 mb-4">
+              <div className="flex justify-between items-center gap-2 lg:gap-7 xl:gap-10 mb-4">
                 <div className="flex flex-col items-start justify-center gap-1 w-6/12">
                   <label htmlFor="firstName" >First Name</label>
                   <input type="text" name="firstName" id="firstName" placeholder='First Name' className='h-12 w-full rounded-lg p-3 outline-none border-slate-400 border' required />
@@ -97,11 +97,11 @@ const page = () => {
               <div className="mb-4">
                 <label htmlFor="phone" className='text-sm font-medium leading-6'>Phone number</label>
                 <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input '>
-                  <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none'>
-                    <option value="PK">PK +92</option>
-                    <option value="IND">IND +91</option>
+                  <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none w-3/12 sm:w-2/12 md:w-3/12 lg:w-3/12 xl:w-2/12'>
+                    <option value="PK">+92</option>
+                    <option value="IND">+91</option>
                   </select>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-8/12 px-3 outline-none' />
+                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 w-9/12 sm:w-10/12 md:w-9/12 lg:w-9/12 xl:w-10/12 px-3 outline-none rounded-2xl' />
                 </div>
               </div>
 
@@ -123,9 +123,9 @@ const page = () => {
 
           <div className="right w-full md:w-1/2 relative z-30">
             <div className="flex flex-col gap-4">
-              <h2 className="uppercase font-light text-4xl md:text-5xl text-heading_blue tracking-wider">Get in Touch</h2>
+              <h2 className="uppercase font-light text-4xl lg:text-5xl text-heading_blue tracking-wider">Get in Touch</h2>
 
-              <p className="text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
+              <p className="text-sm md:text-base lg:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
 
               <button className="button-filled">
                 Contact us

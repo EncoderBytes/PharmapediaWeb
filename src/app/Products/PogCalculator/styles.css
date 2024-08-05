@@ -1,9 +1,10 @@
 .outlined-text {
-  font-size: 140px;
+  /* font-size: 140px; */
   color: transparent;
   -webkit-text-stroke: 1px white;
-  letter-spacing: -6px;
-  line-height: 122px;
+  letter-spacing: -5px;
+  /* line-height: 122px; */
   text-align: left;
   font-weight: 900;
 }
+

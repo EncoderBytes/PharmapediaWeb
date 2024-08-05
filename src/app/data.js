@@ -125,7 +125,7 @@ export const blogs = [
 export const staticBlogs = [
   {
     id: 1,
-    img: "./staticBlog.svg",
+    img: "./Rectangle 6.svg",
     title: 'Lorem ipsum dolor sit amet consectetur.',
     blogdate: '21 March 2021',
   }, {
@@ -135,7 +135,32 @@ export const staticBlogs = [
     blogdate: '21 March 2021',
   }, {
     id: 3,
-    img: "./staticBlog.svg",
+    img: "./Rectangle 6 (1).svg",
+    title: 'Lorem ipsum dolor sit amet consectetur.',
+    blogdate: '21 March 2021',
+  },
+]
+
+export const staticBlogs1 = [
+  {
+    id: 1,
+    img: "./staticBlog1Img1.svg",
+    title: 'Lorem ipsum dolor sit amet consectetur.',
+    blogdate: '21 March 2021',
+  }, {
+    id: 2,
+    img: "./staticBlog1Img2.svg",
+    title: 'Lorem ipsum dolor sit amet consectetur.',
+    blogdate: '21 March 2021',
+  }, {
+    id: 3,
+    img: "./staticBlog1Img3.svg",
+    title: 'Lorem ipsum dolor sit amet consectetur.',
+    blogdate: '21 March 2021',
+  },
+  {
+    id: 4,
+    img: "./staticBlog1Img4.svg",
     title: 'Lorem ipsum dolor sit amet consectetur.',
     blogdate: '21 March 2021',
   },
